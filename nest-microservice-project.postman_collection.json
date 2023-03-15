@@ -1,0 +1,485 @@
+{
+	"info": {
+		"_postman_id": "6b228463-da3b-49ed-b12c-7f3de9bacde5",
+		"name": "nest-init-project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6500781"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{idToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Angeloni Cuesta\",\r\n    \"username\":\"ngloni test2\",\r\n    \"email\":\"angelonisraeltest2@gmail.com\",\r\n    \"password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/api/v1/user",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{idToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/api/v1/user",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{idToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{endpoint}}/api/v1/user/6410e771e961c78729351045",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"6410e771e961c78729351045"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Passengers",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Angeloni Cuesta 3\",\r\n    \"email\":\"angelonisraeltest3@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/api/v1/passenger",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"passenger"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{idToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/api/v1/passenger",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"passenger"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/api/v1/passenger/6411025b1bbd91f105df5775",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"passenger",
+								"6411025b1bbd91f105df5775"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{endpoint}}/api/v1/passenger/6411049f1bbd91f105df5777",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"passenger",
+								"6411049f1bbd91f105df5777"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Flights",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{idToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pilot\":\"Angeloni Cuesta\",\r\n    \"airplane\":\"airplane 1\",\r\n    \"destinationCity\":\"Chicago\",\r\n    \"flightDate\":\"03-01-2022\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/api/v1/flight",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"flight"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{idToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/api/v1/flight",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"flight"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/api/v1/flight/6411025b1bbd91f105df5775",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"flight",
+								"6411025b1bbd91f105df5775"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{idToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{endpoint}}/api/v1/flight/6411049f1bbd91f105df5777",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"flight",
+								"6411049f1bbd91f105df5777"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Passenger",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{idToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{endpoint}}/api/v1/flight/64113e842c52afdedc7a98b2/passenger/6411025b1bbd91f105df5775",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"flight",
+								"64113e842c52afdedc7a98b2",
+								"passenger",
+								"6411025b1bbd91f105df5775"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Sign in",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"idToken\", jsonData.access_token);\r",
+									"postman.setEnvironmentVariable(\"refreshToken\", jsonData.refreshToken);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"test\",\r\n    \"password\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/api/v1/auth/signin",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign Up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Test\",\r\n    \"username\":\"test\",\r\n    \"email\":\"test@gmail.com\",\r\n    \"password\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{endpoint}}/api/v1/auth/signup",
+							"host": [
+								"{{endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}/api/v1/task/1",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"task",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
